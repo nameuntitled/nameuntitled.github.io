@@ -1499,6 +1499,17 @@ body {
 input::placeholder {
   color: var(--font-color);
 }
+#web_bg {
+  position: fixed;
+  z-index: -999;
+  width: 100%;
+  height: 100%;
+  background: url(/img/background.jpg);
+  background-attachment: local;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 h1,
 h2,
 h3,
@@ -1606,14 +1617,14 @@ blockquote > :last-child {
   margin-bottom: 0 !important;
 }
 :root {
-  --hl-color: #90a4ae;
-  --hl-bg: #f6f8fa;
-  --hltools-bg: #e6ebf1;
-  --hltools-color: #90a4ae;
-  --hlnumber-bg: #f6f8fa;
-  --hlnumber-color: rgba(144,164,174,0.5);
-  --hlscrollbar-bg: #dce4eb;
-  --hlexpand-bg: linear-gradient(180deg, rgba(246,248,250,0.6), rgba(246,248,250,0.9));
+  --hl-color: #a6accd;
+  --hl-bg: #292d3e;
+  --hltools-bg: #252938;
+  --hltools-color: #a6accd;
+  --hlnumber-bg: #292d3e;
+  --hlnumber-color: rgba(166,172,205,0.5);
+  --hlscrollbar-bg: #393f57;
+  --hlexpand-bg: linear-gradient(180deg, rgba(41,45,62,0.6), rgba(41,45,62,0.9));
 }
 [data-theme='dark'] {
   --hl-color: rgba(255,255,255,0.7);
@@ -1638,10 +1649,10 @@ figure.highlight pre .addition {
   color: #105ede;
 }
 figure.highlight pre .meta {
-  color: #7c4dff;
+  color: #c792ea;
 }
 figure.highlight pre .comment {
-  color: rgba(149,165,166,0.8);
+  color: #676e95;
 }
 figure.highlight pre .variable,
 figure.highlight pre .attribute,
@@ -1655,10 +1666,10 @@ figure.highlight pre .css .id,
 figure.highlight pre .tag .name,
 figure.highlight pre .css .class,
 figure.highlight pre .css .pseudo {
-  color: #e53935;
+  color: #ff5370;
 }
 figure.highlight pre .tag {
-  color: #39adb5;
+  color: #89ddff;
 }
 figure.highlight pre .number,
 figure.highlight pre .preprocessor,
@@ -1666,10 +1677,10 @@ figure.highlight pre .literal,
 figure.highlight pre .params,
 figure.highlight pre .constant,
 figure.highlight pre .command {
-  color: #f76d47;
+  color: #f78c6c;
 }
 figure.highlight pre .built_in {
-  color: #ffb62c;
+  color: #ffcb6b;
 }
 figure.highlight pre .ruby .class .title,
 figure.highlight pre .css .rules .attribute,
@@ -1682,12 +1693,12 @@ figure.highlight pre .xml .cdata,
 figure.highlight pre .special,
 figure.highlight pre .number,
 figure.highlight pre .formula {
-  color: #91b859;
+  color: #c3e88d;
 }
 figure.highlight pre .keyword,
 figure.highlight pre .title,
 figure.highlight pre .css .hexcolor {
-  color: #39adb5;
+  color: #89ddff;
 }
 figure.highlight pre .function,
 figure.highlight pre .python .decorator,
@@ -1697,14 +1708,14 @@ figure.highlight pre .ruby .title .keyword,
 figure.highlight pre .perl .sub,
 figure.highlight pre .javascript .title,
 figure.highlight pre .coffeescript .title {
-  color: #6182b8;
+  color: #82aaff;
 }
 figure.highlight pre .tag .attr,
 figure.highlight pre .javascript .function {
-  color: #7c4dff;
+  color: #c792ea;
 }
 #article-container figure.highlight .line.marked {
-  background-color: rgba(128,203,196,0.251);
+  background-color: rgba(113,124,180,0.314);
 }
 #article-container figure.highlight table {
   display: block;
@@ -2489,6 +2500,9 @@ figure.highlight pre .javascript .function {
 }
 #recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap .article-meta-link {
   margin: 0 4px;
+}
+#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap time {
+  display: none;
 }
 #recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap a {
   color: #858585;
@@ -3285,7 +3299,6 @@ h1.page-title + .tag-cloud-list {
 }
 #footer {
   position: relative;
-  background-color: #49b1f5;
   background-attachment: scroll;
   background-position: bottom;
   background-size: cover;
@@ -3314,7 +3327,6 @@ h1.page-title + .tag-cloud-list {
 #page-header {
   position: relative;
   width: 100%;
-  background-color: #49b1f5;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -3328,7 +3340,6 @@ h1.page-title + .tag-cloud-list {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: var(--mark-bg);
   content: '';
 }
 #page-header.full_page {
@@ -3350,7 +3361,6 @@ h1.page-title + .tag-cloud-list {
 }
 #page-header #site-title {
   margin: 0;
-  color: var(--white);
   font-size: 1.85em;
 }
 @media screen and (min-width: 768px) {
@@ -3359,7 +3369,6 @@ h1.page-title + .tag-cloud-list {
   }
 }
 #page-header #site-subtitle {
-  color: var(--light-grey);
   font-size: 1.15em;
 }
 @media screen and (min-width: 768px) {
@@ -3379,7 +3388,6 @@ h1.page-title + .tag-cloud-list {
 }
 #page-header #site_social_icons .social-icon {
   margin: 0 10px;
-  color: var(--light-grey);
   text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
   font-size: 1.43em;
 }
@@ -3392,7 +3400,6 @@ h1.page-title + .tag-cloud-list {
 #page-header #scroll-down .scroll-down-effects {
   position: relative;
   width: 100%;
-  color: var(--light-grey);
   font-size: 20px;
 }
 #page-header.not-home-page {
@@ -3453,7 +3460,6 @@ h1.page-title + .tag-cloud-list {
 }
 #page-header.not-top-img #nav a,
 #page-header.not-top-img #nav .site-name {
-  color: var(--font-color);
   text-shadow: none;
 }
 #page-header.nav-fixed #nav {
@@ -3469,23 +3475,12 @@ h1.page-title + .tag-cloud-list {
   -ms-transition: -ms-transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
-#page-header.nav-fixed #nav #blog-info {
-  color: var(--font-color);
-}
-#page-header.nav-fixed #nav #blog-info:hover {
-  color: #49b1f5;
-}
 #page-header.nav-fixed #nav #blog-info .site-name {
   text-shadow: none;
 }
 #page-header.nav-fixed #nav a,
 #page-header.nav-fixed #nav #toggle-menu {
-  color: var(--font-color);
   text-shadow: none;
-}
-#page-header.nav-fixed #nav a:hover,
-#page-header.nav-fixed #nav #toggle-menu:hover {
-  color: #49b1f5;
 }
 #page-header.nav-fixed.fixed #nav {
   top: 0;
@@ -3538,18 +3533,12 @@ h1.page-title + .tag-cloud-list {
 #post > #post-info .post-title {
   padding-bottom: 4px;
   border-bottom: 1px solid var(--light-grey);
-  color: var(--text-highlight-color);
 }
 #post > #post-info .post-title .post-edit-link {
   float: right;
 }
-#post > #post-info #post-meta,
-#post > #post-info #post-meta a {
-  color: #78818a;
-}
 #post-info .post-title {
   margin-bottom: 8px;
-  color: var(--white);
   font-weight: normal;
   font-size: 2.5em;
   line-height: 1.5;
@@ -3564,7 +3553,6 @@ h1.page-title + .tag-cloud-list {
   padding-left: 10px;
 }
 #post-info #post-meta {
-  color: var(--light-grey);
   font-size: 95%;
 }
 @media screen and (min-width: 768px) {
@@ -3591,7 +3579,6 @@ h1.page-title + .tag-cloud-list {
   margin-right: 4px;
 }
 #post-info #post-meta a {
-  color: var(--light-grey);
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
@@ -3599,8 +3586,10 @@ h1.page-title + .tag-cloud-list {
   transition: all 0.3s ease-out;
 }
 #post-info #post-meta a:hover {
-  color: #49b1f5;
   text-decoration: underline;
+}
+#post-info #post-meta time {
+  display: none;
 }
 #nav {
   position: absolute;
@@ -3649,7 +3638,6 @@ h1.page-title + .tag-cloud-list {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  color: var(--light-grey);
 }
 #nav #blog-info .site-icon {
   margin-right: 6px;
@@ -3660,15 +3648,6 @@ h1.page-title + .tag-cloud-list {
   display: none;
   padding: 2px 0 0 6px;
   vertical-align: top;
-}
-#nav #toggle-menu:hover {
-  color: var(--white);
-}
-#nav a {
-  color: var(--light-grey);
-}
-#nav a:hover {
-  color: var(--white);
 }
 #nav .site-name {
   text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
@@ -3708,7 +3687,6 @@ h1.page-title + .tag-cloud-list {
   padding: 0;
   width: max-content;
   border-radius: 5px;
-  background-color: var(--sidebar-bg);
   -webkit-box-shadow: 0 5px 20px -4px rgba(0,0,0,0.5);
   box-shadow: 0 5px 20px -4px rgba(0,0,0,0.5);
   -webkit-animation: sub_menus 0.3s 0.1s ease both;
@@ -3743,7 +3721,6 @@ h1.page-title + .tag-cloud-list {
   display: inline-block;
   padding: 8px 16px;
   width: 100%;
-  color: var(--font-color) !important;
   text-shadow: none !important;
 }
 #nav.hide-menu #toggle-menu {
@@ -3776,7 +3753,6 @@ h1.page-title + .tag-cloud-list {
   z-index: -1;
   width: 0;
   height: 3px;
-  background-color: #80c8f8;
   content: '';
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
